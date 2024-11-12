@@ -7,7 +7,7 @@ from io import BytesIO
 import re
 app = FastAPI()
 
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
 
 @app.get("/")
 async def root():
