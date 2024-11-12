@@ -17,7 +17,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5.3.0
         with:
-          python-version: 3.7
+          python-version: 3.12.5
 
       # Step-2 Install Python Virtual ENV
       - name: Install Python Virtual ENV
