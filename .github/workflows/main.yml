@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Check out repo so our workflow can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Step-1 Setup Python
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5.3.0
         with:
           python-version: 3.7
 
@@ -25,7 +25,7 @@ jobs:
 
       # Step-3 Setup Virtual ENV
       - name: Virtual ENV
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache-venv # name for referring later
         with:
           path: venv #what we cache: the Virtual ENV
@@ -46,7 +46,7 @@ jobs:
         run: cd ./api && zip -g ../api.zip -r
           
       - name: Upload ZIP file artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: api
           path: api.zip
