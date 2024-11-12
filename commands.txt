@@ -1,0 +1,7 @@
+py -m venv venv
+pip install uvicorn
+pip install fastapi
+pip install pytesseract
+pip install python-multipart
+uvicorn main:app --reload
+pip freeze > requirements.txt 
